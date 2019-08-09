@@ -23,7 +23,6 @@ class App extends React.Component {
       .get(`http://localhost:5000/api/restricted/data`)
       .then(response => {
         this.setState({ secretData: response.data });
-        console.log(this.state.secretData);
       })
       .catch(err => console.log(err));
   };
@@ -32,7 +31,11 @@ class App extends React.Component {
     return (
       <div className="App">
         Welcome to Form Manager <Form />
-        <Display dataStatus={this.state.showData} btn={this.onClick} />
+        <Display
+          dataStatus={this.state.showData}
+          btn={this.onClick}
+          data={this.state.secretData}
+        />
       </div>
     );
   }
