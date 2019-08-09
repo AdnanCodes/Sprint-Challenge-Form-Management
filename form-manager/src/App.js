@@ -1,4 +1,5 @@
 import React from "react";
+import Form from "./components/Form";
 import "./App.css";
 
 class App extends React.Component {
@@ -7,7 +8,11 @@ class App extends React.Component {
     this.state = {};
   }
   render() {
-    return <div className="App">Welcome to Form Manager</div>;
+    return (
+      <div className="App">
+        Welcome to Form Manager <Form />
+      </div>
+    );
   }
 }
 
