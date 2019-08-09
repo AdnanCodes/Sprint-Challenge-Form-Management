@@ -30,6 +30,6 @@ describe("<Display />", () => {
         ]}
       />
     );
-    display.getByText(/^Name: test$/i);
+    display.getByText(/^Name: test$/i); //Testing if prop is passed and rendered
   });
 });
