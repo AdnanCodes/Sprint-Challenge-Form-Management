@@ -6,7 +6,9 @@ import "./App.css";
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      secretData: []
+    };
   }
   componentDidMount() {
     this.fetchUserData();
@@ -15,10 +17,12 @@ class App extends React.Component {
     axios
       .get(`http://localhost:5000/api/restricted/data`)
       .then(response => {
-        console.log(response);
+        this.setState({ secretData: response.data });
+        console.log(this.state.secretData);
       })
       .catch(err => console.log(err));
   };
+
   render() {
     return (
       <div className="App">
