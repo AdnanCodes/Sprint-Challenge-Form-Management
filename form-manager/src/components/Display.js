@@ -10,11 +10,9 @@ const Display = props => {
           {props.data.map(item => {
             return (
               <div key={item.name}>
-                <br />
-                Name: {item.name} <br />
-                Course: {item.course} <br />
-                Technique: {item.technique} <br />
-                <br />
+                <div>Name: {item.name}</div>
+                <div>Course: {item.course}</div>
+                <div>Technique: {item.technique}</div>
               </div>
             );
           })}
